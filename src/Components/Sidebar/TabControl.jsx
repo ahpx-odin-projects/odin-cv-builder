@@ -1,11 +1,12 @@
 import Card from "../Universal/Card";
 
 export default function TabControl({indexChanged=null}) {
-    const handleButtonClick = (i) => {
+    const handleButton = (i) => {
         if (indexChanged!=null) {
             indexChanged(i)
         }
     }
+    
 
     return (<>
         <Card style={{
@@ -13,9 +14,9 @@ export default function TabControl({indexChanged=null}) {
             flexDirection: 'column',
             gap: '10px'
         }}>
-            <button onClick={handleButtonClick(0)}>Personal info</button>
-            <button onClick={handleButtonClick(1)}>Education</button>
-            <button onClick={handleButtonClick(2)}>Work experience</button>
+            <button onClick={()=>handleButton(0)}>Personal info</button>
+            <button onClick={()=>handleButton(1)}>Education</button>
+            <button onClick={()=>handleButton(2)}>Work experience</button>
         </Card>
     </>)
 }

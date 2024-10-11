@@ -1,23 +1,29 @@
-import Card from "../Universal/Card";
+import { useState } from "react";
+
+import Education from "./Education";
+import Experience from "./Experience";
 import PersonalInfo from "./PersonalInfo";
 import TabControl from "./TabControl";
 
 export default function Sidebar(){
+    const [index, setIndex] = useState(0)
+    const handleIndexChanged = (i) => {
+        setIndex(i)
+    }
+
     return (
         <>
             <div>
-                <TabControl></TabControl>
-                <PersonalInfo></PersonalInfo>
-                <Card>
-                    <h2>Education</h2>
-                    <p>Schools and any specialized training</p>
-                    <button>Update</button>
-                </Card>
-                <Card>
-                    <h2>Experience</h2>
-                    <p>Jobs and any relevant work experience</p>
-                    <button>Update</button>
-                </Card>
+                <TabControl indexChanged={handleIndexChanged}></TabControl>
+                <div hidden={index != 0}>
+                    <PersonalInfo></PersonalInfo>
+                </div>
+                <div hidden={index != 1}>
+                    <Education></Education>
+                </div>
+                <div hidden={index != 2}>
+                    <Experience></Experience>
+                </div>
             </div>
         </>
     )
