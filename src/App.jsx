@@ -8,7 +8,9 @@ function App() {
   return (
     <div className='main'>
       <Sidebar />
-      <Card>
+      <Card style={{
+        height: '80vh',
+      }}>
         <h1>CV Preview</h1>
       </Card>
     </div>

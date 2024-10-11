@@ -1,7 +1,7 @@
 import './Card.css'
 
-export default function Card({children}){
-    return <div className="card">
+export default function Card({children, style=null}){
+    return <div className="card" style={style}>
         {children}
     </div>
 }
