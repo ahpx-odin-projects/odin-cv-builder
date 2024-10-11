@@ -6,7 +6,7 @@ import Experience from "./Experience"
 
 export default function Preview() {
     return (<Card style={{
-        height: '90vh',
+        // height: '90vh',
       }}>
         <div style={{display: 'flex', alignItems: 'center', flexDirection:'column'}}>
             <h2>Jonathan Joestar</h2>
@@ -22,7 +22,10 @@ export default function Preview() {
             </div>
         </div>
         <hr/>
-        <div>
+        <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+        }}>
             <h3>Education</h3>
             <Experience startTime='2023/3' endTime='2024/3' title='Oxford University' subtitle='Bachelor Degree of Sociology'/>
             <Experience startTime='2023/3' endTime='2024/3' title='Oxford University' subtitle='Master Degree of Sociology'/>

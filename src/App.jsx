@@ -6,8 +6,12 @@ import Preview from './Components/CVPreview/Preview'
 function App() {
   return (
     <div className='main'>
-      <Sidebar />
-      <Preview />
+      <div className='sidebar'>
+        <Sidebar />
+      </div>
+      <div className='preview'>
+        <Preview />
+      </div>
     </div>
   )
 }
