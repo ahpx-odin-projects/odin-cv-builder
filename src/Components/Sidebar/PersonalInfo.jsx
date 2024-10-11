@@ -9,7 +9,6 @@ export default function PersonalInfo() {
         <TextBox title='Full name'></TextBox>
         <TextBox title='Email'></TextBox>
         <TextBox title='Phone'></TextBox>
-        <TextBox title='Date of birth' type='date'></TextBox>
         <button>Update</button>
     </Card>
     )
