@@ -1,6 +1,7 @@
 import Card from "../Universal/Card"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
+import Experience from "./Experience"
 
 
 export default function Preview() {
@@ -20,16 +21,16 @@ export default function Preview() {
                 </span>
             </div>
         </div>
-        <hr style={{border: '1px solid #ccc', width: '100%'}} />
+        <hr/>
         <div>
             <h3>Education</h3>
-            <div style={{
-                display: "grid",
-                gridTemplateColumns: '4fr 6fr',
-                gap: '16px'
-            }}>
-                
-            </div>
+            <Experience startTime='2023/3' endTime='2024/3' title='Oxford University' subtitle='Bachelor Degree of Sociology'/>
+            <Experience startTime='2023/3' endTime='2024/3' title='Oxford University' subtitle='Master Degree of Sociology'/>
+            <h3>Experience</h3>
+            <Experience startTime='2021/6' endTime='2022/8' title='Intern' subtitle='Tech Company' description='Worked on developing and maintaining web applications.'/>
+            <Experience startTime='2020/5' endTime='2021/5' title='Research Assistant' subtitle='University Lab' description='Assisted in research projects and data analysis.'/>
+            <Experience startTime='2019/7' endTime='2020/4' title='Volunteer' subtitle='Non-Profit Organization' description='Organized community events and managed social media accounts.'/>
         </div>
-      </Card>)
+      </Card>
+    )
 }
