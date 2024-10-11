@@ -1,9 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 
-import './Components/Sidebar'
-import Sidebar from './Components/Sidebar'
-import Card from './Components/Card'
+import Sidebar from './Components/Sidebar/Sidebar'
+import Card from './Components/Universal/Card'
 
 function App() {
   return (
