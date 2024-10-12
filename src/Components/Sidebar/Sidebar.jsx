@@ -3,7 +3,7 @@ import TabControl from "./TabControl";
 import PersonalInfo from "./PersonalInfo";
 import Edit from "./Edit/Edit";
 
-export default function Sidebar() {
+export default function Sidebar({onInfoChange}) {
   const [index, setIndex] = useState(0);
   const handleIndexChanged = (i) => {
     setIndex(i);
@@ -14,7 +14,7 @@ export default function Sidebar() {
       <div>
         <TabControl indexChanged={handleIndexChanged}></TabControl>
         <div hidden={index != 0}>
-          <PersonalInfo></PersonalInfo>
+          <PersonalInfo onInfoChange={onInfoChange}></PersonalInfo>
         </div>
         <div hidden={index != 1}>
           <Edit title='Education' subtitle='Add your educational background.'></Edit>

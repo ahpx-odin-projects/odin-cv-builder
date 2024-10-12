@@ -4,9 +4,7 @@ import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import Experience from "./Experience";
 
 export default function Preview({
-  name = "Jonathan Joestar",
-  email = "jojo@joestar.com",
-  phone = "+1 1145141919",
+  info,
   education = [
     <Experience
       startTime="2023/3"
@@ -43,15 +41,15 @@ export default function Preview({
           flexDirection: "column",
         }}
       >
-        <h2>{name}</h2>
+        <h2>{info.name}</h2>
         <div>
           <span style={{ marginRight: "10px" }}>
             <FontAwesomeIcon icon={faEnvelope} style={{ marginRight: "8px" }} />
-            {email}
+            {info.email}
           </span>
           <span>
             <FontAwesomeIcon icon={faPhone} style={{ marginRight: "8px" }} />
-            {phone}
+            {info.phone}
           </span>
         </div>
       </div>
