@@ -5,32 +5,8 @@ import Experience from "./Experience";
 
 export default function Preview({
   info,
-  education = [
-    <Experience
-      startTime="2023/3"
-      endTime="2024/3"
-      title="Oxford University"
-      subtitle="Bachelor Degree of Sociology"
-      key="default1"
-    />,
-    <Experience
-      startTime="2023/3"
-      endTime="2024/3"
-      title="Oxford University"
-      subtitle="Master Degree of Sociology"
-      key="default2"
-    />,
-  ],
-  experience = [
-    <Experience
-      startTime="2021/6"
-      endTime="2022/8"
-      title="Intern"
-      subtitle="Tech Company"
-      description="Worked on developing and maintaining web applications."
-      key="default1"
-    />,
-  ],
+  education,
+  experience,
 }) {
   return (
     <Card>

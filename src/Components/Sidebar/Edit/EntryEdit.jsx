@@ -19,7 +19,7 @@ export default function EducationEdit({edited, value=null}) {
     return (<>
         <TextBox value={value.institution} onChange={(o) => handleEdit(o, 'institution')} title="Institution" />
         <TextBox value={value.title} onChange={(o) => handleEdit(o, 'title')} title="Title" />
-        <TextBox value={value.start} onChange={(o) => handleEdit(o, 'start')} title="Start" type="date" />
-        <TextBox value={value.end} onChange={(o) => handleEdit(o, 'end')} title="End" type="date" />
+        <TextBox value={value.start} onChange={(o) => handleEdit(o, 'start')} title="Start" type="month" />
+        <TextBox value={value.end} onChange={(o) => handleEdit(o, 'end')} title="End" type="month" />
     </>)
 }

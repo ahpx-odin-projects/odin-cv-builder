@@ -3,11 +3,12 @@ import TabControl from "./TabControl";
 import PersonalInfo from "./PersonalInfo";
 import Edit from "./Edit/Edit";
 
-export default function Sidebar({onInfoChange}) {
+export default function Sidebar({
+  onInfoChange,
+  onEducationChange,
+  onExperienceChange,
+}) {
   const [index, setIndex] = useState(0);
-  const handleIndexChanged = (i) => {
-    setIndex(i);
-  };
 
   return (
     <>
@@ -17,12 +18,32 @@ export default function Sidebar({onInfoChange}) {
           <PersonalInfo onInfoChange={onInfoChange}></PersonalInfo>
         </div>
         <div hidden={index != 1}>
-          <Edit title='Education' subtitle='Add your educational background.'></Edit>
+          <Edit
+            itemsChange={handleEducationChange}
+            title="Education"
+            subtitle="Add your educational background."
+          ></Edit>
         </div>
         <div hidden={index != 2}>
-          <Edit title='Experience' subtitle='Add your work experience.'></Edit>
+          <Edit
+            itemsChange={handleExperienceChange}
+            title="Experience"
+            subtitle="Add your work experience."
+          ></Edit>
         </div>
       </div>
     </>
   );
+
+  function handleIndexChanged(i) {
+    setIndex(i);
+  }
+
+  function handleEducationChange(e) {
+    onEducationChange(e);
+  }
+
+  function handleExperienceChange(e) {
+    onExperienceChange(e);
+  }
 }

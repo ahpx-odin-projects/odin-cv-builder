@@ -3,7 +3,7 @@ export default function Experience({startTime, endTime, title, subtitle, descrip
     <div
       style={{
         display: "grid",
-        gridTemplateColumns: "1fr 6fr",
+        gridTemplateColumns: "2fr 6fr",
         gap: "16px",
       }}
     >
