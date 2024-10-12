@@ -1,8 +1,7 @@
 import { useState } from "react";
 import TabControl from "./TabControl";
 import PersonalInfo from "./PersonalInfo";
-import EducationInfo from "./Education/EducationInfo";
-import ExperienceInfo from "./Experience/ExperienceInfo";
+import Edit from "./Edit/Edit";
 
 export default function Sidebar() {
   const [index, setIndex] = useState(0);
@@ -18,10 +17,10 @@ export default function Sidebar() {
           <PersonalInfo></PersonalInfo>
         </div>
         <div hidden={index != 1}>
-          <EducationInfo></EducationInfo>
+          <Edit title='Education' subtitle='Add your educational background.'></Edit>
         </div>
         <div hidden={index != 2}>
-          <ExperienceInfo></ExperienceInfo>
+          <Edit title='Experience' subtitle='Add your work experience.'></Edit>
         </div>
       </div>
     </>
